@@ -1,0 +1,349 @@
+html {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'witcher';
+    src: url('./fonts/Thewitcher-jnOj.ttf') format('truetype');
+}
+
+footer {
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.footer-fijo {
+    position: absolute;
+    bottom: 0;
+    margin-top: 0;
+}
+
+nav {
+    color: white;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 3rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.portada {
+    background-image: url('./img/cavill-geralt.webp');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.serie {
+    font-family: 'witcher';
+    font-size: 7rem;
+    color: white;
+    margin-top: calc(65vh);
+    margin-left: 10px;
+}
+
+.copyright {
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.texto-footer {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: white;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.menu-item:hover {
+    color: #fff;
+}
+
+.selected {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+nav a:hover {
+    background-color: rgb(222, 12, 23);
+}
+
+.contenedor-imagenes {
+    display: grid;
+    margin-top: 1rem;
+}
+
+.contenedor-imagenes a {
+    text-decoration: none;
+    color: white;
+}
+
+figure img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    opacity: 0.8;
+}
+
+figure img:hover {
+    opacity: 1;
+}
+
+.actor {
+    font-size: 1rem;
+}
+
+.papel {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.grid-personajes {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.personaje {
+    margin: 20px;
+    width: 45%;
+    aspect-ratio: 4/3;
+    text-decoration: none;
+}
+
+.personaje-contenedor-img {
+    background-color: aqua;
+    height: 100%;
+    width: 100%;
+}
+
+a h3 {
+    color: white;
+    margin-bottom: 5px
+}
+
+.personaje-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.personaje-img:hover {
+    opacity: 1;
+}
+
+.personaje-texto {
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+}
+
+.detalle {
+    margin: 10px 20px;
+}
+
+iframe {
+    aspect-ratio: 16/9;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-size: 2rem;
+}
+
+.presentacion {
+    width: 1024;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dos-una {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.entrada {
+    font-size: 2.3rem;
+    line-height: 3rem;
+}
+
+.sangrado {
+    margin-left: 30px;
+}
+
+.uno-cinco {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.blanco {
+    color: white;
+    word-wrap: break-word;
+}
+
+.inverso {
+    color: black;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+a figure figcaption {
+    color: white;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.separacion {
+    margin: 1.5rem 0;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .container {
+        margin: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+    }
+
+    .contenedor-imagenes {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        row-gap: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 370px) {
+    .menu-item {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .uno-cinco {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+    .serie {
+        font-size: 4rem;
+        
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .presentacion {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    .entrada {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .dos-una {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .contenedor-imagenes {
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+    }
+
+    .portada {
+        background-image: url('./img/the_witcher1.jpg');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .detalle {
+        margin: 10px 130px;
+    }
+}
+
+@media only screen and (max-height: 850px) {
+    .serie {
+        margin: 0;
+        font-size: 4rem;
+        margin-top: calc(55vh);
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-height: 550px) {
+    .serie {
+        margin: 0;
+        font-size: 4rem;
+        margin-top: calc(35vh);
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-height: 280px) {
+    footer {
+        display: none;
+    }
+
+    .serie {
+        font-size: 3rem;
+        margin-top: calc(15vh);
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pec1",
+  "version": "1.0.0",
+  "description": "PEC 1. Desarrollo sitio web",
+  "source": ["src/index.html", "src/categoria.html", "src/presentacion.html","src/enlaces.html"],
+  "scripts": {
+    "start": "npm-run-all clean parcel:dev",
+    "build": "npm-run-all clean parcel:build",
+    "parcel:dev": "parcel",
+    "parcel:build": "parcel build",
+    "clean": "rimraf dist .parcel-cache"
+  },
+  "keywords": [],
+  "author": "ablancogonza",
+  "license": "ISC",
+  "browserslist": [
+    "last 8 years"
+  ],
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.10.2",
+    "posthtml-include": "^1.7.4",
+    "rimraf": "^5.0.5"
+  }
+}

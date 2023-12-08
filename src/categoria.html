@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+    <article>
+        <section>
+            <div class="contenedor-imagenes">
+                <a href="geralt.html">
+                    <figure>
+                        <img src="./img/cavill-geralt.webp" alt="Geralt de Rivia" />
+                        <figcaption>
+                            <div class="papel">Geralt de Rivia</div>
+                            <div class="actor">Henry Cavill</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/Yennefer.jpeg" alt="Yennefer de Vengerberg" />
+                        <figcaption>
+                            <div class="papel">Yennefer de Vengerberg</div>
+                            <div class="actor">Anya Chalotra</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/PrincesaCirideCintra.webp" alt="Princesa Ciride de Cintra" />
+                        <figcaption>
+                            <div class="papel">Princesa Ciride de Cintra</div>
+                            <div class="actor">Freya Allan</div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="proximamente.html">
+                    <figure>
+                        <img src="./img/Jaskier.webp" alt="Jaskier" />
+                        <figcaption>
+                            <div class="papel">Jaskier</div>
+                            <div class="actor">Joey Batey</div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <include src="src/footer.html"></include>
+    </footer>
+
+    <script type="module">
+        import * as menuLib from "./js/menu.js";
+
+        var header = document.getElementsByTagName('header')[0];
+        var nav = menuLib.menu(2);
+        header.append(nav);
+        menuLib.aplicaEstilos(nav);
+    </script>
+</body>
+
+</html>

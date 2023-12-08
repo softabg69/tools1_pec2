@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="presentacion">
+        <article>
+            <section>
+                <div class="dos-una">
+                    <p class="entrada">
+                        Andrzej Sapkowski creó un fenómeno internacional con su saga de fantasía épica más vendida del
+                        New
+                        York Times, The Witcher. Los dos primeros libros inspiraron la primera temporada de la exitosa
+                        serie de
+                        Netflix.
+                    </p>
+                    <figure>
+                        <img src="./img/libros.webp" alt="Libros de la Saga The Witcher">
+                        <figcaption>
+                            Libros de la Saga The Witcher
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <p>
+                    (Lodz, 1948) Es economista de profesión. Habla algunos idiomas extranjeros. En los años 1972-94 era
+                    trabajador del comercio exterior. En el año 1986 publicó su primer cuento El brujo (Wiedzmin) en un
+                    periódico polaco "Fantastyka". Dos años después fue elegido el mejor autor de cuentos polacos de
+                    fantasía en este periódico. Además Andrzej Sapkowski es el autor de tres colecciones de cuentos con
+                    el brujo Geralt: El brujo (Wiedzmin), La espada del destino (Miecz przeznaczenia) y El último deseo
+                    (Ostatnie zyczenia) así como de una saga de cinco libros: La sangre de los elfos (Krew elfow), El
+                    tiempo del desdén (Czas pogardy), Bautismo de fuego (Chrzest ognia), La torre de la golondrina
+                    (Wieza Jaskolki) y La dama del lago (Pani jeziora).
+                </p>
+                <figure>
+                    <iframe width="100%" src="https://www.youtube.com/embed/CoRcTM3XUts" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <figcaption>
+                        The Witcher - conversación entre Andrzej Sapkowski y Lauren Hissrich | Netflix España
+                    </figcaption>
+                </figure>
+            </section>
+            <section>
+                <p>
+                    Andrzej Sapkowski vendió los derechos de la saga de Geralt de Rivia a CD Projekt en 2007 por la
+                    cantidad de 9.500 dólares. Ese mismo año The Witcher fue estrenado para Microsoft Windows. Cuatro
+                    años después, en 2011, fue estrenado The Witcher 2: Assassins of Kings para la consola Xbox 360,
+                    Microsoft Windows, OS X y GNU/Linux. Estos dos juegos gozaron de relativa popularidad entre los
+                    jugadores de RPG de fantasía medieval. Pero fue en 2015 cuando la tercera entrega de la saga
+                    posicionó a CD Projekt RED entre los mejores estudios de videojuegos con The Witcher 3: Wild Hunt.
+                    Este último videojuego ha vendido más de 10 millones de copias por todo el mundo, y fue ganador de
+                    más de 800 premios, incluido Juego del año en los Game Awards de 2015. Debido al rotundo éxito
+                    de The Witcher 3: Wild Hunt, Sapkowski demandó a CD Projekt RED por la suma de 16 millones de
+                    dólares alegando que los derechos vendidos en 2007 solamente contemplaban los primeros dos
+                    videojuegos y The Witcher 3: Wild Hunt, aunque en el pasado Sapkowski admitió que se le fue ofrecido
+                    un porcentaje extra por parte de CD Projekt RED que él mismo rechazó.
+                </p>
+                <figure>
+                    <img src="./img/videojuego.webp" alt="Videojuego de The Witcher">
+                    <figcaption>
+                        Videojuego de The Witcher
+                    </figcaption>
+                </figure>
+                <p>
+                    En 2016, fue lanzado en beta cerrada Gwent: The Witcher Card Game para PC, PlayStation 4 y Xbox One,
+                    basado en el juego de cartas que también puede jugarse en The Witcher 3: Wild Hunt.6​ Y en 2018 fue
+                    lanzado Thronebreaker: The Witcher Tales, un videojuego de cartas similar pero con un modo campaña y
+                    una historia spin-off del universo de The Witcher.7​
+                </p>
+            </section>
+            <section>
+                <h3>Temporada 1</h3>
+                <div class="sangrado">
+                    <h4>Año del estreno: 2019</h4>
+                    Geralt de Rivia, un cazador de monstruos mutante, viaja en pos de su destino por un mundo turbulento
+                    en
+                    el que, a menudo, los humanos son peores que las bestias.
+                    Protagonizada por:Henry Cavill,Anya Chalotra,Freya Allan
+                    Creada por:Lauren Schmidt Hissrich
+                </div>
+
+
+                <h3>Temporada 2</h3>
+                <div class="sangrado">
+                    <h4>Año de estreno: 2021</h4>
+                    Geralt acepta su destino mientras protege a Ciri de las fuerzas que luchan por asumir el control del
+                    Continente... así como del misterioso poder que posee la joven.
+                </div>
+
+                <h3>Temporada 3</h3>
+                <div class="sangrado">
+                    <h4>Año de estreno: 2023</h4>
+                    El destino los unió. Ahora, unas peligrosas fuerzas intentan separarlos. Geralt y Yennefer luchan
+                    para
+                    proteger a Ciri mientras la guerra se cierne sobre el Continente.
+                </div>
+
+            </section>
+        </article>
+    </main>
+    <footer>
+        <include src="src/footer.html"></include>
+    </footer>
+    <script type="module">
+        import * as menuLib from "./js/menu.js";
+
+        var header = document.getElementsByTagName('header')[0];
+        var nav = menuLib.menu(3);
+        header.append(nav);
+        menuLib.aplicaEstilos(nav);
+    </script>
+</body>
+
+</html>
