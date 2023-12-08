@@ -16,6 +16,7 @@ body {
 
 header {
     overflow: hidden;
+    margin: 20px;
 }
 
 @font-face {
@@ -53,12 +54,23 @@ p {
     overflow: hidden;
 }
 
-.serie {
-    font-family: 'witcher';
-    font-size: 7rem;
+.logo-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo-title .logo {
+    max-width: 50px;
+    background-color: transparent;
     color: white;
-    margin-top: calc(65vh);
-    margin-left: 10px;
+}
+
+.logo-title .title {
+    font-family: 'witcher';
+    font-size: 3rem;
+    color: white;
 }
 
 .copyright {
@@ -245,6 +257,8 @@ a figure figcaption {
 .separacion {
     margin: 1.5rem 0;
 }
+
+
 
 
 @media only screen and (min-width: 600px) {
