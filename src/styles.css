@@ -11,12 +11,16 @@ body {
     background-color: black;
     display: flex;
     flex-direction: column;
-
 }
 
 header {
     overflow: hidden;
-    margin: 20px;
+    margin: 10px auto;
+}
+
+.header-portada {
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
 article {
@@ -30,14 +34,15 @@ article {
 }
 
 footer {
+    margin: 0 auto;
     margin-top: 40px;
-    margin-left: 20px;
 }
 
 .footer-fijo {
     position: absolute;
     bottom: 0;
     margin-top: 0;
+    margin-left: 20px;
 }
 
 nav {
@@ -318,7 +323,7 @@ a figure figcaption {
 } */
 
 @media only screen and (min-width: 2561px) {
-    /* .portada {
+    .portada {
         background-image: -webkit-image-set(
             url("/src/img/portada4k.jpg?as=avif&width=3840"),
             url("/src/img/portada4k.jpg?as=webp&width=3840"));
@@ -326,8 +331,14 @@ a figure figcaption {
             url("/src/img/portada4k.jpg?as=avif&width=3840") type("image/avif"),
             url("/src/img/portada4k.jpg?as=webp&width=3840") type("image/webp")
         );
-    } */
-   
+    }
+    article {
+        max-width: 2100px;
+    }
+    .contenedor-imagenes {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  
 }
 
 @media only screen and (max-width: 2560px) {
@@ -346,6 +357,7 @@ a figure figcaption {
     .contenedor-imagenes {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
 }
 
 @media only screen and (max-width: 1920px) {
@@ -364,12 +376,17 @@ a figure figcaption {
     .contenedor-imagenes {
         grid-template-columns: 1fr 1fr;
     }
+  
 }
 
 @media only screen and (max-width: 1250px) {
     .portada {
         background-position: 60% center;
     }
+    article {
+        max-width: 1024px;
+    }
+   
 }
 
 
@@ -430,6 +447,11 @@ a figure figcaption {
     .menu-item {
         font-size: 0.9rem;
     }
+    .uno-cinco {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 }
 
 
@@ -447,47 +469,3 @@ a figure figcaption {
     }
 }
 
-/* @media only screen and (min-width: 1920px) {
-    .contenedor-imagenes {
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 2rem;
-    }
-
-    .portada {
-        background-image: -webkit-image-set(
-            url("/src/img/portada-1920.avif"),
-            url("/src/img/portada-1920.webp"));
-        background-image: image-set(
-            url("/src/img/portada-1920.avif") type("image/avif"),
-            url("/src/img/portada-1920.webp") type("image/webp")
-        );
-    }
-
-    .detalle {
-        margin: 10px 130px;
-    }
-} */
-
-
-
-
-
-/* @media only screen and (max-height: 550px) {
-    .serie {
-        margin: 0;
-        font-size: 4rem;
-        margin-top: calc(35vh);
-        margin-left: 20px;
-    }
-} */
-
-/* @media only screen and (max-height: 280px) {
-    footer {
-        display: none;
-    }
-
-    .serie {
-        font-size: 3rem;
-        margin-top: calc(15vh);
-    }
-} */
