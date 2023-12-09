@@ -9,10 +9,15 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <div class="logo-title">
+            <img src = "img/logo.svg" alt="Logo The Witcher" class="logo"/>
+            <div class="title">The Witcher</div>
+        </div>
+    </header>
     <main class="presentacion">
         <h1>Enlaces</h1>
-        <section>
+        <!-- <section>
             <h2 class="inverso">Portada</h2>
             <h5>Tipografía:</h5>
             <div class="sangrado">
@@ -61,7 +66,7 @@
                 </a>
                 <a href="https://twitter.com/G4G_Revenant/status/1146806352867745792">
                     <figure class="uno-cinco">
-                        <img src="./img/Yennefer.jpeg" />
+                        <img src="./img/yennefer.jpg" />
                         <figcaption>
                             Jennefer. https://twitter.com/G4G_Revenant/status/1146806352867745792
                         </figcaption>
@@ -70,7 +75,7 @@
                 <a
                     href="https://www.latercera.com/mouse/una-conversacion-con-la-showrunner-de-the-wicther-sobre-el-feedback-de-los-fans-el-rodaje-durante-el-coronavirus-y-la-expansion-del-mundo-de-la-serie/">
                     <figure class="uno-cinco">
-                        <img src="./img/PrincesaCirideCintra.webp" />
+                        <img src="./img/ciri.jpg" />
                         <figcaption>
                             Ciride.
                             https://www.latercera.com/mouse/una-conversacion-con-la-showrunner-de-the-wicther-sobre-el-feedback-de-los-fans-el-rodaje-durante-el-coronavirus-y-la-expansion-del-mundo-de-la-serie/
@@ -176,20 +181,13 @@
                 </a>
             </div>
 
-        </section>
+        </section> -->
     </main>
     <footer>
         <include src="src/footer.html"></include>
     </footer>
 
-    <script type="module">
-        import * as menuLib from "./js/menu.js";
-
-        var header = document.getElementsByTagName('header')[0];
-        var nav = menuLib.menu(4);
-        header.append(nav);
-        menuLib.aplicaEstilos(nav);
-    </script>
+    
 </body>
 
 </html>
