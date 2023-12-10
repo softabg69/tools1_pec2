@@ -4,12 +4,13 @@
       "chromaSubsampling": "4:4:4"
     },
     "webp": {
-      "nearLossless": true
+      "quality": 75
     },
     "png": {
-      "palette": true
+      "palette": true,
+      "quality": 75
     },
     "avif": {
-        "quality": 80
+        "quality": 75
     }
   }

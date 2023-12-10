@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Presentación</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,11 +31,15 @@
                         Netflix.
                     </p>
                     <figure>
-                        <img src="./img/libros.webp" alt="Libros de la Saga The Witcher">
+                        <picture>
+                            <source srcset="./img/libros.jpg?as=jpg&width=432" media="(max-width:570px)">
+                            <source srcset="./img/libros.jpg?as=jpg&width=840" media="(max-width:1023px)">
+                            <source srcset="./img/libros.jpg?as=jpg&width=432" media="(min-width:1024px)">
+                            <img src="./img/libros.jpg?as=jpg&width=432" alt="Libros de la Saga The Witcher" class="libros">
+                        </picture>
                         <figcaption>
                             Libros de la Saga The Witcher
-                        </figcaption>
-                    </figure>
+                        </figcaption>                    </figure>
 
                 </div>
                 <p>
@@ -72,9 +78,9 @@
                     un porcentaje extra por parte de CD Projekt RED que él mismo rechazó.
                 </p>
                 <figure>
-                    <img src="./img/videojuego.webp" alt="Videojuego de The Witcher">
+                    <img src="img/videojuego.svg" alt="Logo del videojuego de The Witcher" class="logo-videojuego slidecaption">
                     <figcaption>
-                        Videojuego de The Witcher
+                        Logo del videojuego de The Witcher
                     </figcaption>
                 </figure>
                 <p>

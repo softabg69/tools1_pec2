@@ -63,6 +63,17 @@ p {
     background-size: cover;
     background-color: black;
     overflow: hidden;
+    clip-path: url(#shape);
+}
+
+.recorte-libros {
+    position: absolute;
+    bottom: 100px;
+    left: 25px;
+    width: 300px;
+    height: 324px;
+    background-image: url("/src/img/libros.jpg?as=jpg&width=300");
+    clip-path: polygon(1% 10%, 63% 1%, 99% 9%, 95% 82%, 33% 99%, 2% 85%);
 }
 
 .logo-title {
@@ -303,32 +314,51 @@ a figure figcaption {
     margin: 1.5rem 0;
 }
 
+.logo-videojuego {
+    background-color: white;
+}
 
+.slidecaption {
+    animation-name: voltear;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    transform-origin: center center;
+ }
 
-/* 
-@media only screen and (min-width: 600px) {
-    .container {
-        margin: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 700px;
+ .libros {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 19/20;
+    opacity: 1;
+ }
+
+ .vertical {
+    aspect-ratio: 1/2;
+ }
+
+.cuadrado {
+    aspect-ratio: 1;
+}
+ @keyframes voltear {
+    from {
+       transform: rotateY(0deg);
     }
-
-    .contenedor-imagenes {
-        grid-template-columns: 1fr 1fr;
-        column-gap: 2rem;
-        row-gap: 3rem;
+    to
+    {
+       transform: rotateY(-360deg);
     }
-
-} */
+ }
 
 @media only screen and (min-width: 2561px) {
     .portada {
         background-image: -webkit-image-set(
             url("/src/img/portada4k.jpg?as=avif&width=3840"),
-            url("/src/img/portada4k.jpg?as=webp&width=3840"));
+            url("/src/img/portada4k.jpg?as=webp&width=3840"),
+            url("/src/img/portada4k.jpg?as=jpg&width=3840"));
         background-image: image-set(
             url("/src/img/portada4k.jpg?as=avif&width=3840") type("image/avif"),
+            url("/src/img/portada4k.jpg?as=jpg&width=3840") type("image/jpg"),
             url("/src/img/portada4k.jpg?as=webp&width=3840") type("image/webp")
         );
     }
@@ -345,10 +375,13 @@ a figure figcaption {
     .portada {
         background-image: -webkit-image-set(
             url("/src/img/portada4k.jpg?as=avif&width=2560"),
-            url("/src/img/portada4k.jpg?as=webp&width=2560"));
+            url("/src/img/portada4k.jpg?as=webp&width=2560"),
+            url("/src/img/portada4k.jpg?as=jpg&width=2560"),
+            );
         background-image: image-set(
             url("/src/img/portada4k.jpg?as=avif&width=2560") type("image/avif"),
-            url("/src/img/portada4k.jpg?as=webp&width=2560") type("image/webp")
+            url("/src/img/portada4k.jpg?as=webp&width=2560") type("image/webp"),
+            url("/src/img/portada4k.jpg?as=jpg&width=2560") type("image/jpg")
         );
     }
     article {
@@ -364,10 +397,13 @@ a figure figcaption {
     .portada {
         background-image: -webkit-image-set(
             url("/src/img/portada4k.jpg?as=avif&width=1920"),
-            url("/src/img/portada4k.jpg?as=webp&width=1920"));
+            url("/src/img/portada4k.jpg?as=webp&width=1920"),
+            url("/src/img/portada4k.jpg?as=jpg&width=1920"),
+            );
         background-image: image-set(
             url("/src/img/portada4k.jpg?as=avif&width=1920") type("image/avif"),
-            url("/src/img/portada4k.jpg?as=webp&width=1920") type("image/webp")
+            url("/src/img/portada4k.jpg?as=webp&width=1920") type("image/webp"),
+            url("/src/img/portada4k.jpg?as=jpg&width=1920") type("image/jpg"),
         );
     }
     article {
@@ -395,12 +431,14 @@ a figure figcaption {
     .portada {
         background-image: -webkit-image-set(
             url("/src/img/portada4k.jpg?as=avif&width=1024"),
-            url("/src/img/portada4k.jpg?as=webp&width=1024"));
+            url("/src/img/portada4k.jpg?as=webp&width=1024"),
+            url("/src/img/portada4k.jpg?as=jpg&width=1024")
+            );
         background-image: image-set(
             url("/src/img/portada4k.jpg?as=avif&width=1024") type("image/avif"),
-            url("/src/img/portada4k.jpg?as=webp&width=1024") type("image/webp")
+            url("/src/img/portada4k.jpg?as=webp&width=1024") type("image/webp"),
+            url("/src/img/portada4k.jpg?as=jpg&width=1024") type("image/jpg")
         );
-        
     }
     .presentacion {
         margin-left: 5%;
@@ -416,6 +454,16 @@ a figure figcaption {
     .dos-una {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    .recorte-libros {
+        position: absolute;
+        bottom: 100px;
+        left: 25px;
+        width: 150px;
+        height: 162px;
+        background-image: url("/src/img/libros.jpg?as=jpg&width=150");
+        clip-path: polygon(1% 10%, 63% 1%, 99% 9%, 95% 82%, 33% 99%, 2% 85%);
     }
 }
 
@@ -438,6 +486,8 @@ a figure figcaption {
     .contenedor-imagenes {
         grid-template-columns: 1fr;
     }
+
+    
 }
 
 
@@ -454,7 +504,12 @@ a figure figcaption {
     }
 }
 
-
+@media only screen and (max-width: 375px) {
+    
+    .recorte-libros {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 880px) and (max-height: 780px) and (orientation: portrait) {
     
