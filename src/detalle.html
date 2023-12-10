@@ -22,13 +22,23 @@
     <article>
         <h1>Geralt de Rivia</h1>
         <figure>
-            <img src="/src/img/henry-cavill-8K.jpg?as=avif&width=1024" alt="Geralt de Rivia" srcset="/src/img/henry-cavill-8K.jpg?as=avif&width=480 480w, 
-                /src/img/henry-cavill-8K.jpg?as=avif&width=768 768w,
-                /src/img/henry-cavill-8K.jpg?as=avif&width=1024 1024w,
-                /src/img/henry-cavill-8K.jpg?as=avif&width=1920 1920w" sizes="(max-width: 480px) 100vw,
+            <picture>
+                <source srcset="/src/img/geralt-centrado.jpg?as=webp&width=630" media="(max-width:767px)">
+                <source srcset="/src/img/henry-cavill-8K.jpg?as=webp&width=944" media="(max-width:1250px)">
+                <source srcset="/src/img/henry-cavill-8K.jpg?as=webp&width=1120" media="(max-width:1920px)">
+                <source srcset="/src/img/henry-cavill-8K.jpg?as=webp&width=1520" media="(max-width:2560px)">
+                <img src="/src/img/geralt-centrado.jpg?as=webp&width=640" alt="Geralt de Rivia"  class="geralt">
+            </picture>
+            <!-- <img src="/src/img/geralt-centrado.jpg?as=webp&width=1024" alt="Geralt de Rivia" class="geralt"
+            srcset="/src/img/geralt-centrado.jpg?as=webp&width=480 480w, 
+                /src/img/geralt-centrado.jpg?as=webp&width=768 768w,
+                /src/img/henry-cavill-8K.jpg?as=webp&width=1024 1024w,
+                /src/img/henry-cavill-8K.jpg?as=webp&width=1920 1920w" 
+            sizes="(max-width: 480px) 100vw,
                     (max-width: 768px) 100vw,
                     (max-width: 1024px) 100vw,
-                    (max-width: 1920px) 100vw">
+                    (max-width: 1920px) 100vw"> -->
+
             <figcaption>
                 Geralt de Rivia
             </figcaption>
@@ -62,6 +72,7 @@
                 Rivia".
             </p>
         </section>
+        
         <section>
             <figure>
                 <iframe width="100%" src="https://www.youtube.com/embed/t_UcvD7zDoU" title="YouTube video player"
@@ -88,6 +99,7 @@
     <footer>
         <include src="src/footer.html"></include>
     </footer>
+
 </body>
 
 </html>

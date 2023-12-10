@@ -6,7 +6,9 @@
     "src/index.html",
     "src/categoria.html",
     "src/presentacion.html",
-    "src/enlaces.html"
+    "src/enlaces.html",
+    "src/detalle.html",
+    "src/proximamente.html"
   ],
   "scripts": {
     "start": "npm-run-all clean parcel:dev",

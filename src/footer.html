@@ -1,13 +1,13 @@
 <section class="enlaces">
-    <a href="index.html">Portada</a>
-    <a href="categoria.html">Categoría</a>
-    <a href="presentacion.html">Presentación</a>
-    <a href="enlaces.html">Enlaces</a>
+    <a href="javascript:navega('index.html')">Portada</a>
+    <a href="javascript:navega('categoria.html')">Categoría</a>
+    <a href="javascript:navega('presentacion.html')">Presentación</a>
+    <a href="javascript:navega('enlaces.html')">Enlaces</a>
 </section>
 <section>
     <div class="logo-copyright">
         <div>
-            <img src = "img/logo.svg" alt="Logo The Witcher" class="logo"/>
+            <img src="img/logo.svg" alt="Logo The Witcher" class="logo" />
         </div>
         <div>
             <div class="copyright">2023 © Antonio Blanco González</div>
@@ -17,3 +17,48 @@
         </div>
     </div>
 </section>
+
+<div id="contenedor-cubre">
+    <div class="cubreIn"></div>
+</div>
+
+<script language="javascript">
+
+    var estado = 0;
+    var urlPagina = '';
+
+    window.addEventListener("load", () => {
+        estado = 0;
+        var element = document.getElementsByClassName('cubreIn')[0];
+        setTimeout(() => {
+            element.classList.add("cubreIn-cambia");
+        }, 50);
+        
+    });
+
+    function navega(pagina) {
+        urlPagina = pagina;
+        estado = 1;
+        var contecubre = document.getElementById('contenedor-cubre');
+
+        var cubre = document.createElement('div');
+        cubre.classList.add('cubreOut');
+       
+        contecubre.appendChild(cubre);
+
+        setTimeout(() => {
+            cubre.classList.add("cubreOut-cambia");
+        }, 50);
+       
+    }
+
+    addEventListener("transitionend", (event) => {
+        if (estado === 0) { // load
+            var contecubre = document.getElementById('contenedor-cubre');
+            contecubre.innerHTML='';
+        } else { // navegar
+            window.location.assign(urlPagina);
+        }
+        estado = 0;
+    });
+</script>
